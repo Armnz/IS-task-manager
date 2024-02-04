@@ -1,6 +1,6 @@
 <?php
 
-include('config/db_connect.php');
+include('../config/db_connect.php');
 
 // write SQL query for all tasks
 $sql = 'SELECT task_name, task_description, id FROM tasks ORDER BY created_at';
@@ -22,12 +22,12 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 
 <h2 class="text-center p-4 text-success">Tasks</h2>
 
-<?php include('components/taskList.php'); ?>
+<?php include('../components/taskList.php'); ?>
 
-<?php include('components/footer.php'); ?>
+<?php include('../components/footer.php'); ?>
 
 </html>

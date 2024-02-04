@@ -1,6 +1,6 @@
 <?php
 
-include('config/db_connect.php');
+include('../config/db_connect.php');
 
 $task = null;
 
@@ -36,16 +36,16 @@ if(isset($_GET['id'])){
 <!DOCTYPE html>
 <html>
 
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 
 <div class="container text-center">
     <?php if($task): ?>
         <h3 class="pt-4 mb-0  text-success"><?php echo htmlspecialchars($task['task_name']); ?></h3>
         <p class="small p-0 m-0"><?php echo date($task['created_at']); ?> </p>
-        <p class="p-4 bg-white"><?php echo htmlspecialchars($task['task_description']); ?></p>
+        <p class="p-4 m-2 bg-white"><?php echo htmlspecialchars($task['task_description']); ?></p>
 
         <!-- delete form -->
-        <form action="delete.php" method="POST">
+        <form action="deleteTask.php" method="POST">
           <input type="hidden" name="id_to_delete" value="<?php echo $task['id'] ?>">
           <input type="submit" name="delete" value="Delete" class="btn btn-danger">
         </form>
@@ -54,6 +54,6 @@ if(isset($_GET['id'])){
     <?php endif; ?>
 </div>
 
-<?php include('components/footer.php'); ?>
+<?php include('../components/footer.php'); ?>
 
 </html>

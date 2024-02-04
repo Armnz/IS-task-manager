@@ -17,7 +17,7 @@
                 ?>
               </div>
               <div class="mt-3 d-flex justify-content-center">
-                <a href="details.php?id=<?php echo $task['id']?>" class="btn btn-success m-2" style="width: auto;">More info</a>
+                <a href="taskDetails.php?id=<?php echo $task['id']?>" class="btn btn-success m-2" style="width: auto;">More info</a>
               </div>
             </div>
           </div>

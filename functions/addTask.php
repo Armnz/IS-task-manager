@@ -1,6 +1,6 @@
 <?php
 
-include('config/db_connect.php');
+include('../config/db_connect.php');
 
 $task_name = $task_description = '';
 $errors = array('task_name' => '', 'task_description' => '');
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
 
         if ($stmt->execute()) {
             // success -> redirect to index
-            header('Location: index.php');
+            header('Location: ../public/index.php');
         } else {
             // error
             echo 'Query error: ' . mysqli_error($conn);
@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
 
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 
 <section class="container my-4">
     <h4 class="text-center">Add a Task</h4>
@@ -73,6 +73,6 @@ if (isset($_POST['submit'])) {
     </form>
 </section>
 
-<?php include('components/footer.php'); ?>
+<?php include('../components/footer.php'); ?>
 
 </html>
