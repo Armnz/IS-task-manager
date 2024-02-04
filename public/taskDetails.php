@@ -45,7 +45,7 @@ if(isset($_GET['id'])){
         <p class="p-4 m-2 bg-white"><?php echo htmlspecialchars($task['task_description']); ?></p>
 
         <!-- delete form -->
-        <form action="deleteTask.php" method="POST">
+        <form action="../functions/deleteTask.php" method="POST">
           <input type="hidden" name="id_to_delete" value="<?php echo $task['id'] ?>">
           <input type="submit" name="delete" value="Delete" class="btn btn-danger">
         </form>
